@@ -1,0 +1,95 @@
+//_navbar.scss
+
+$color-light-background: #f9f9f9;
+$color-border: #ccc;
+$color-primary: #ffafcc;
+$color-secondary: #3198f7;
+$color-light-blue: #a2d2ff;
+$color-button-text: white;
+$navbar-background-color: #202020;
+
+// Stylizacja navbar
+.navbar {
+  background-color: $navbar-background-color;
+  border-bottom: 2px solid $color-primary;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.navbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.navbar__logo-image {
+  height: 4rem;
+}
+
+.navbar__logo-text {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.navbar__menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__menu a {
+  color: $color-light-blue;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.navbar__menu a:hover {
+  background-color: $color-primary;
+  color: $color-button-text;
+}
+
+.navbar__toggle {
+  display: none; /* Ukryj hamburger menu na szerszych ekranach */
+  color: white;
+}
+
+.logout-button {
+  font-family: "Antonio", sans-serif;
+  font-size: 1rem;
+  background-color: $color-primary;
+  color: #202020;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.logout-button:hover {
+  background-color: $color-light-blue;
+  color: #202020;
+}
+
+@media (max-width: 769px) {
+  .navbar__menu {
+    display: none; /* Ukryj standardowe menu na węższych ekranach */
+  }
+  .navbar__toggle {
+    display: block; /* Pokaż hamburger menu na węższych ekranach */
+    color: white;
+  }
+}

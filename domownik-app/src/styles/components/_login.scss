@@ -1,0 +1,92 @@
+// _login.scss
+
+$primary-color: #FFAFCC;
+$secondary-color: #BDE0FE;
+$tertiary-color: #A2D2FF;
+$dark-color: #202020;
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $dark-color;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  h1 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 2rem;
+    color: $primary-color;
+    margin-top: 0.5rem;
+  }
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+}
+
+h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 2rem;
+  color: $dark-color;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+  }
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $tertiary-color;
+    }
+  }
+}

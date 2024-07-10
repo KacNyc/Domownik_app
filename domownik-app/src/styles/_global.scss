@@ -1,0 +1,48 @@
+//_global.scss
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.4s;
+}
+
+body {
+  font-family: "Antonio", sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #BDE0FE;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px; /* Maksymalna szerokość zawartości */
+  width: 100%;
+  margin: 0 auto; /* Wyśrodkowanie kontenera */
+  padding: 0 1rem; /* Dodatkowe wcięcie dla mniejszych ekranów */
+}
+
+@media (min-width: 800px) and (max-width: 1380px) {
+  .entry-list {
+    width: 50rem; // Szerokość na tabletach
+    padding: 1rem;
+  }
+}
+@media (min-width: 400px) and (max-width: 915px) {
+  .entry-list {
+    width: 30rem; // Szerokość na tabletach
+    padding: 1rem;
+  }
+}
