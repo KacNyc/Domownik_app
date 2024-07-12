@@ -8,18 +8,18 @@ import '../styles/components/_navbar.scss'; // Import stylów
 import taskManagerIcon from '../../assets/task-manager-done-manager-task-svgrepo-com.svg';
 
 const Navbar = () => {
-    const navigate = useNavigate(); // Hook do nawigacji
+    const navigate = useNavigate(); // Hook do nawigacji / Hook for navigation
 
     // Funkcja obsługująca wylogowanie użytkownika
     const handleLogout = () => {
-        localStorage.removeItem('isAuthenticated'); // Usunięcie informacji o zalogowaniu z localStorage
-        navigate('/login'); // Przekierowanie użytkownika do strony logowania
+        localStorage.removeItem('isAuthenticated'); // Usunięcie informacji o zalogowaniu z localStorage / Deletion of login information from localStorage
+        navigate('/login'); // Przekierowanie użytkownika do strony logowania / Redirecting the user to the login page
     };
 
     return (
         <nav className="navbar">
             <div className="navbar__content container">
-                {/* Logo przeniesione do Link w celu umożliwienia nawigacji */}
+                {/* Logo przeniesione do Link w celu umożliwienia nawigacji / Logo moved to Link to enable navigation */}
                 <Link to="/" className="navbar__logo">
                     <img src={taskManagerIcon} alt="Task Manager Icon" className="navbar__logo-image" />
                     <span className="navbar__logo-text">Domownik</span>

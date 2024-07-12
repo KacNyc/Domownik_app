@@ -1,11 +1,12 @@
 // users.js
 
 import React, { useState, useEffect } from 'react';
-import '../styles/components/_users.scss'; // Import stylów
-import { AvatarGenerator } from 'random-avatar-generator'; // Import generatora avatarów
+import '../styles/components/_users.scss'; // Import stylów / Styles import
+import { AvatarGenerator } from 'random-avatar-generator'; // Import generatora avatarów / Import of avatar generator
 
 const Users = () => {
     const [users, setUsers] = useState(() => {
+        // Retrieve users from localStorage or return an empty array
         // Pobieramy użytkowników z localStorage lub zwracamy pustą tablicę
         const savedUsers = localStorage.getItem('users');
         return savedUsers ? JSON.parse(savedUsers) : [];
@@ -14,6 +15,7 @@ const Users = () => {
     const [nickname, setNickname] = useState('');
     const generator = new AvatarGenerator();
 
+    // Save users to localStorage after the change
     // Zapisujemy użytkowników do localStorage po zmianie
     useEffect(() => {
         localStorage.setItem('users', JSON.stringify(users));
@@ -25,7 +27,7 @@ const Users = () => {
                 id: Math.random().toString(36).substr(2, 9),
                 email,
                 nickname,
-                avatar: generator.generateRandomAvatar(), // Generowanie losowego avatara
+                avatar: generator.generateRandomAvatar(), // Generowanie losowego avatara / Generation of a random avatar
             };
             setUsers([...users, newUser]);
             setEmail('');
