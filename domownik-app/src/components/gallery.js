@@ -1,7 +1,6 @@
 // gallery.js
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import trashBinIcon from '../../assets/trash-bin-2-svgrepo-com.svg'; // Import ikony kosza
 import lupa from '../../assets/lupa.png'; // Import ikony lupy
 import '../styles/components/_gallery.scss'; // Import stylów dla komponentu Gallery
@@ -104,18 +103,22 @@ const Gallery = () => {
     );
 
     // Przechodzenie do poprzedniego zdjęcia w modalu
-    const handlePrevPhoto = () => {
+    const handlePrevPhoto = (e) => {
+        e.stopPropagation(); // Zapobiegamy zamknięciu modalu przy kliknięciu na przycisk
         if (selectedPhotoIndex > 0) {
-            setPreviewImage(photoList[selectedPhotoIndex - 1].image);
-            setSelectedPhotoIndex(selectedPhotoIndex - 1);
+            const newIndex = selectedPhotoIndex - 1;
+            setPreviewImage(photoList[newIndex].image);
+            setSelectedPhotoIndex(newIndex);
         }
     };
 
     // Przechodzenie do następnego zdjęcia w modalu
-    const handleNextPhoto = () => {
+    const handleNextPhoto = (e) => {
+        e.stopPropagation(); // Zapobiegamy zamknięciu modalu przy kliknięciu na przycisk
         if (selectedPhotoIndex < photoList.length - 1) {
-            setPreviewImage(photoList[selectedPhotoIndex + 1].image);
-            setSelectedPhotoIndex(selectedPhotoIndex + 1);
+            const newIndex = selectedPhotoIndex + 1;
+            setPreviewImage(photoList[newIndex].image);
+            setSelectedPhotoIndex(newIndex);
         }
     };
 
@@ -222,7 +225,6 @@ const Gallery = () => {
                             <button className="nav-button prev" onClick={handlePrevPhoto}>Poprzednie</button>
                             <button className="nav-button next" onClick={handleNextPhoto}>Następne</button>
                         </div>
-
                     </div>
                 </div>
             )}
