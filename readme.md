@@ -1,4 +1,54 @@
-#### Struktura projektu:
+# Domownik App
+by Kacper Nyczak
+______________________________________________________________________________
+
+## Table od contents
+1. Project description
+2. Setup
+3. Technology
+4. Folder structure
+5. Project status
+______________________________________________________________________________
+
+## 1. Project description:
+The project is a web application for communication between householders. The main goal of the project is to allow users to interact by chatting and sharing and viewing photos. The principle is similar to the group chats popular in the market.
+
+## 2. Setup
+
+### 2.1 Cloning the repository
+**HTTPS**
+git clone https://github.com/KacNyc/Domownik_app.git
+
+**SSH:**
+git@github.com:KacNyc/Domownik_app.git
+
+### 2.2 Dependencies:
+    * npm install
+    * npm install @babel/core@^7.17.0
+    * npm install react@^18.3.1 --save-dev
+
+### 2.3 Launching
+    To launch the project locally, follow the steps below:
+
+**Clone the repository:**
+git clone https://github.com/KacNyc/Domownik_app.git
+
+**Navigate to the project directory:**
+cd Domownik_app
+
+**Install the dependencies:**
+npm install
+
+**Start the project:**
+npm start
+
+## 3. Technology
+Latest versions
+* React
+* Babel
+* CSS
+
+## 4. Folder structure:
 
 * /domownik-app
 *     /assets
@@ -13,6 +63,7 @@
 *         gallery.js
 *         chat.js
 *         users.js
+  *       listUsers.json
 *      /styles
 *         /components
 *             _navbar.scss
@@ -29,33 +80,5 @@
 *     package.json
 *     webpack.config.js
 
-# **Opis projektu: Aplikacja do zarządzania wpisami**
-
-Projekt aplikacji do zarządzania wpisami jest stworzony w środowisku React, umożliwiającym użytkownikom dodawanie, przeglądanie, sortowanie i wyszukiwanie wpisów. Aplikacja jest skonstruowana w modularny sposób, z wykorzystaniem komponentów React oraz stylów SCSS.
-
-## **Komponent Home**
-
-Komponent Home jest centralną częścią aplikacji, odpowiadającą za wyświetlanie listy wpisów, ich sortowanie oraz zarządzanie nimi.
-
-#### Stan komponentu:
-* entries: Tablica przechowująca wpisy użytkownika.
-* sortOrder: Określa aktualny porządek sortowania wpisów (rosnąco lub malejąco).
-* searchTerm: Przechowuje aktualnie wprowadzony przez użytkownika termin wyszukiwania.
-* newEntryContent i newEntryTags: Zawartość i tagi nowego wpisu dodawanego przez użytkownika.
-
-#### Efekty uboczne:
-* useEffect zapisuje oraz odczytuje wpisy z localStorage, zapewniając zachowanie danych po odświeżeniu strony.
-
-#### Funkcje:
-* addEntry: Dodaje nowy wpis na podstawie danych wprowadzonych przez użytkownika.
-* deleteEntry: Usuwa wybrany wpis na podstawie jego indeksu.
-
-#### Elementy interfejsu użytkownika:
-* Slogan (h1 className="slogan"): Wyświetla motywujący slogan na górze strony.
-* Sort options (div className="sort-options"): Pozwala użytkownikowi sortować wpisy według daty.
-* New entry form (div className="new-entry"): Formularz do dodawania nowych wpisów.
-* Lista wpisów (div className="entries"): Wyświetla posortowane i przefiltrowane wpisy.
-* Ikona usuwania (div className="delete-icon"): Ikona do usuwania wybranych wpisów.
-
-#### Stylizacja:
-* Stylizacja komponentu Home jest zarządzana za pomocą arkusza stylów SCSS. Obejmuje ona m.in. ustawienia marginesów, paddingów, kolorów oraz interakcji użytkownika.
+## 5. Project status:
+The project is in the development phase. Further functionalities and improvements are planned.
