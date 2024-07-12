@@ -1,5 +1,5 @@
 # Domownik App
-[](/home/kacper/Obrazy/Zrzuty ekranu/Zrzut ekranu z 2024-07-12 14-59-12.png)
+by Kacper Nyczak
 ______________________________________________________________________________
 
 ## Table od contents
