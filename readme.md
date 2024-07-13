@@ -2,6 +2,8 @@
 by Kacper Nyczak
 ______________________________________________________________________________
 
+Trello Board: https://trello.com/invite/b/OO5x5nQR/ATTI2dd72bccebfae8614c15d4ba9b9e75f674DBF5F2/domownik-app-project
+
 ## Table od contents
 1. Project description
 2. Setup
