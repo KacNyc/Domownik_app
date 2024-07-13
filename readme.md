@@ -2,8 +2,6 @@
 by Kacper Nyczak
 ______________________________________________________________________________
 
-Trello Board: https://trello.com/invite/b/OO5x5nQR/ATTI2dd72bccebfae8614c15d4ba9b9e75f674DBF5F2/domownik-app-project
-
 ## Table od contents
 1. Project description
 2. Setup
@@ -12,8 +10,10 @@ Trello Board: https://trello.com/invite/b/OO5x5nQR/ATTI2dd72bccebfae8614c15d4ba9
 5. Project status
 ______________________________________________________________________________
 
+Trello Board: https://trello.com/invite/b/OO5x5nQR/ATTI2dd72bccebfae8614c15d4ba9b9e75f674DBF5F2/domownik-app-project
+
 ## 1. Project description:
-The project is a web application for communication between householders. The main goal of the project is to allow users to interact by chatting and sharing and viewing photos. The principle is similar to the group chats popular in the market.
+The "Domownik" project is an advanced web application designed to facilitate communication and collaboration among household members. The application not only allows for chatting, sharing, and viewing photos, but also is prepared for a range of features aimed at streamlining daily household tasks and strengthening bonds among residents.
 
 ## 2. Setup
 
@@ -26,22 +26,30 @@ git@github.com:KacNyc/Domownik_app.git
 
 ### 2.2 Dependencies:
     * npm install
-    * npm install @babel/core@^7.17.0
+    * npm install babel-loader @babel/core --save-dev
     * npm install react@^18.3.1 --save-dev
+    * npm install webpack webpack-cli --save-dev
+    * npm install html-webpack-plugin --save-dev
+    * npm install style-loader css-loader sass-loader --save-dev
 
 ### 2.3 Launching
-    To launch the project locally, follow the steps below:
+To launch the project locally, follow the steps below:
+
 
 **Clone the repository:**
+
 git clone https://github.com/KacNyc/Domownik_app.git
 
 **Navigate to the project directory:**
+
 cd Domownik_app
 
 **Install the dependencies:**
+
 npm install
 
 **Start the project:**
+
 npm start
 
 ## 3. Technology
@@ -65,14 +73,13 @@ Latest versions
 *         gallery.js
 *         chat.js
 *         users.js
-  *       listUsers.json
 *      /styles
 *         /components
 *             _navbar.scss
 *             _home.scss
 *             _gallery.scss
 *             _chat.scss
-*             _extra.scss
+*             _users.scss
 *         main.scss
 *         _global.scss
 *     .babel.rc
